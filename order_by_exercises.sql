@@ -24,7 +24,7 @@
 -- AND gender = 'M'
 -- ORDER BY first_name, last_name;
 
--- Change the order by clause so that you order by last name before first name. Your first result should still be Irena Acton but now the last result should be Maya Zyda.
+-- DONE -- Change the order by clause so that you order by last name before first name. Your first result should still be Irena Acton but now the last result should be Maya Zyda.
 SELECT * FROM employees
 WHERE (first_name
 = 'Irena'
@@ -48,12 +48,21 @@ ORDER BY last_name, first_name;
 -- LIKE '%e';
 
 -- DONE -- Duplicate the previous query and update it to find all employees whose last name starts and ends with 'E' — 899 rows.
+-- SELECT DISTINCT *
+-- FROM employees
+-- WHERE last_name
+-- LIKE 'e%'
+-- AND last_name
+-- LIKE '%e';
+
+-- Update your queries for employees with 'E' in their last name to sort the results by their employee number. Your results should not change!
 SELECT DISTINCT *
 FROM employees
 WHERE last_name
 LIKE 'e%'
 AND last_name
-LIKE '%e';
+LIKE '%e'
+ORDER BY emp_no;
 
 
 -- DONE -- Employees hired in the 90s — 135,214 rows.
@@ -99,9 +108,6 @@ NOT LIKE '%qu%';
 
 
 
-
-
--- Update your queries for employees with 'E' in their last name to sort the results by their employee number. Your results should not change!
 -- Now reverse the sort order for both queries.
 -- Change the query for employees hired in the 90s and born on Christmas such that the first result is the oldest employee who was hired last. It should be Khun Bernini.
 
