@@ -1,10 +1,14 @@
 -- DONE -- Employees with first names 'Irena', 'Vidya', or 'Maya' — 709 rows (Hint: Use IN).
 -- DONE -- Update your query for 'Irena', 'Vidya', or 'Maya' to use OR instead of IN — 709 rows.
+-- DONE -- Now add a condition to find everybody with those names who is also male — 441 rows.
+
 SELECT * FROM employees
-WHERE first_name
+WHERE (first_name
 = 'Irena'
 OR first_name = 'Vidya'
-OR first_name = 'Maya';
+OR first_name = 'Maya')
+AND gender = 'M';
+
 
 -- DONE -- Employees whose last name starts with 'E' — 7,330 rows.
 SELECT DISTINCT *
@@ -36,7 +40,7 @@ WHERE last_name
 LIKE '%q%';	
 
 
--- Now add a condition to find everybody with those names who is also male — 441 rows.
+
 -- Find all employees whose last name starts or ends with 'E' — 30,723 rows.
 -- Duplicate the previous query and update it to find all employees whose last name starts and ends with 'E' — 899 rows.
 -- Find all employees hired in the 90s and born on Christmas — 362 rows.
