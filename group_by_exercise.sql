@@ -14,7 +14,7 @@ AND last_name
 LIKE '%e'
 GROUP BY last_name;
 
--- Update your previous query to now find unique combinations of first and last name where the last name starts and ends with 'E'. You should get 846 rows.
+-- DONE -- Update your previous query to now find unique combinations of first and last name where the last name starts and ends with 'E'. You should get 846 rows.
 SELECT DISTINCT first_name, last_name
 FROM employees
 WHERE last_name
@@ -22,7 +22,7 @@ LIKE 'e%'
 AND last_name
 LIKE '%e';
 
--- Find the unique last names with a 'q' but not 'qu'. You may use either DISTINCT or GROUP BY. 
+-- DONE -- Find the unique last names with a 'q' but not 'qu'. You may use either DISTINCT or GROUP BY. 
 
 SELECT DISTINCT *
 FROM employees
