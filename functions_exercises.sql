@@ -1,5 +1,4 @@
--- Update your query for 'Irena', 'Vidya', or 'Maya'. Use count(*) and GROUP BY to find the number of employees for each gender with those names. Your results should be: "441 M 268 F"
-
+-- DONE -- Update your query for 'Irena', 'Vidya', or 'Maya'. Use count(*) and GROUP BY to find the number of employees for each gender with those names. Your results should be: "441 M 268 F"
 SELECT COUNT(gender), gender
 FROM employees
 WHERE first_name
@@ -7,14 +6,11 @@ IN ('Irena', 'Vidya', 'Maya')
 GROUP BY gender;
 
 
-
-SELECT DISTINCT *
+-- Update your queries for employees whose names start and end with 'E'. Use concat() to combine their first and last name together as a single column in your results.
+SELECT CONCAT(first_name, ' ', last_name)
 FROM employees
-WHERE last_name
-LIKE 'e%'
-AND last_name
-LIKE '%e'
-ORDER BY emp_no DESC;
+WHERE last_name LIKE 'e%'
+AND last_name LIKE '%e';
 
 
 
