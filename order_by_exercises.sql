@@ -33,8 +33,7 @@
 -- AND gender = 'M'
 -- ORDER BY last_name, first_name;
 
--- Now reverse the sort order for both queries.
-
+-- DONE -- Now reverse the sort order for both queries.
 SELECT * FROM employees
 WHERE (first_name
 = 'Irena'
@@ -98,11 +97,19 @@ ORDER BY emp_no DESC;
 -- LIKE '199%';
 
 -- DONE -- Find all employees hired in the 90s and born on Christmas — 362 rows.
+-- SELECT * FROM employees
+-- WHERE hire_date
+-- LIKE '199%'
+-- AND birth_date
+-- LIKE '%-12-25';
+
+-- DONE -- Change the query for employees hired in the 90s and born on Christmas such that the first result is the oldest employee who was hired last. It should be Khun Bernini.
 SELECT * FROM employees
 WHERE hire_date
 LIKE '199%'
 AND birth_date
-LIKE '%-12-25';
+LIKE '%-12-25'
+ORDER BY birth_date, hire_date DESC;
 
 
 -- DONE -- Employees born on Christmas — 842 rows.
@@ -124,11 +131,4 @@ WHERE last_name
 LIKE '%q%'
 AND last_name
 NOT LIKE '%qu%';
-
-
-
-
--- Now reverse the sort order for both queries.
--- Change the query for employees hired in the 90s and born on Christmas such that the first result is the oldest employee who was hired last. It should be Khun Bernini.
-
 
