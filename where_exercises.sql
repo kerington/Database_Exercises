@@ -57,14 +57,22 @@ LIKE '%-12-25';
 
 
 -- DONE -- Employees born on Christmas — 842 rows.
-SELECT * FROM employees
-WHERE birth_date
-LIKE '%-12-25';
+-- SELECT * FROM employees
+-- WHERE birth_date
+-- LIKE '%-12-25';
 
 -- DONE -- Employees with a 'q' in their last name — 1,873 rows.
+-- SELECT DISTINCT *
+-- FROM employees
+-- WHERE last_name
+-- LIKE '%q%';	
+
+-- Find all employees with a 'q' in their last name but not 'qu' — 547 rows.
+
 SELECT DISTINCT *
 FROM employees
 WHERE last_name
-LIKE '%q%';	
+LIKE '%q%'
+AND last_name
+NOT LIKE '%qu%';
 
--- Find all employees with a 'q' in their last name but not 'qu' — 547 rows.
