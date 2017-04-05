@@ -7,14 +7,22 @@
 -- DONE -- Now add a condition to find everybody with those names who is also male — 441 rows.
 
 -- DONE -- Modify your first query to order by first name. The first result should be Irena Majewski and the last result should be Vidya Schaft.
+-- SELECT * FROM employees
+-- WHERE (first_name
+-- = 'Irena'
+-- OR first_name = 'Vidya'
+-- OR first_name = 'Maya')
+-- AND gender = 'M'
+-- ORDER BY first_name;
+
+-- DONE -- Update the query to order by first name and then last name. The first result should now be Irena Acton and the last should be Vidya Zweizig.
 SELECT * FROM employees
 WHERE (first_name
 = 'Irena'
 OR first_name = 'Vidya'
 OR first_name = 'Maya')
 AND gender = 'M'
-ORDER BY first_name;
-
+ORDER BY first_name, last_name;
 
 -- DONE -- Employees whose last name starts with 'E' — 7,330 rows.
 -- SELECT DISTINCT *
@@ -82,7 +90,7 @@ NOT LIKE '%qu%';
 
 
 
--- Update the query to order by first name and then last name. The first result should now be Irena Acton and the last should be Vidya Zweizig.
+
 -- Change the order by clause so that you order by last name before first name. Your first result should still be Irena Acton but now the last result should be Maya Zyda.
 -- Update your queries for employees with 'E' in their last name to sort the results by their employee number. Your results should not change!
 -- Now reverse the sort order for both queries.
