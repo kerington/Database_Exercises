@@ -21,7 +21,7 @@ AND birth_date LIKE '%-12-25'
 ORDER BY DATEDIFF(CURDATE(), hire_date);
 
 
--- Add a GROUP BY clause to your query for last names with 'q' and not 'qu' to find the distinct combination of first and last names. You will find there were some duplicate first and last name pairs in your previous results. Add a count() to your results and use ORDER BY to make it easier to find employees whose unusual name is shared with others.
+-- DONE -- Add a GROUP BY clause to your query for last names with 'q' and not 'qu' to find the distinct combination of first and last names. You will find there were some duplicate first and last name pairs in your previous results. Add a count() to your results and use ORDER BY to make it easier to find employees whose unusual name is shared with others.
 SELECT DISTINCT COUNT(last_name), first_name, last_name
 FROM employees
 WHERE last_name LIKE '%q%'
